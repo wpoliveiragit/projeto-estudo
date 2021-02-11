@@ -1,0 +1,33 @@
+NECESSIDADES
+
+- JRE (Java Runtime Environment- Ambiente de tempo de execução Java)
+    É utilizado para executar as aplicações da plataforma Java. Composto por 
+bibliotecas (APIs) e pela Máquina virtual Java.
+
+- JSDK (Java System Development Kit - Systema do Kit de Desenvolvimento Java)
+    É um conjunto de utilitários que permitem criar sistemas de software para a 
+plataforma Java. É composto por, compilador java e bibliotecas (APIs).
+
+- IDE (Integreted Develpment Environment - Ambiente de desenvolvimento integrado)
+    Os 2 maiores IDEs que existem na atualidade é o Eclipse e o NetBeans.
+    
+    QUAL USAR
+    É mais gosto pessoal de cada desenvolvetor ou instrutor e no caso de 
+ambientes comerciais depende do que os arquitetos deciderem. Ambas as IDE's são 
+excelentes basta escolher qual se encaixa melhor para o projeto a ser desenvolvido. 
+    
+    DIFERENÇAS
+    As diferenças são mais na parte da estrutura das IDE's, pois o eclipse é 
+montado a base de plugins tanto que cada linguagem que o eclipse da suporte já é 
+um plug-in permitindo que o próprio desenvolvedor possa customizar a IDE para que 
+seja como deseja. Podemos ter um eclipse para desenvolver em web e outro para 
+JME(Java Micro Edition). Já o NetBeans aborda o conceito de ambiente integrado 
+sem a necessidade de ficar procurando plugins constantemente, permitindo um 
+ambiente mais prático. Ambas as IDE's podem ser usadas para ambientes academicos 
+e comercias mas: 
+    * Eclipse: Mais usado em ambientes comerciais.
+    * NetBeans: Mais usado em ambientes academicos.
+
+Obs.: PLUGIN (plug-in, add-in ou add-on)  
+Um plugin ou módulo de extensão é um programa usado para adicionar funções a 
+outros programas maiores, provendo alguma funcionalidade específica.

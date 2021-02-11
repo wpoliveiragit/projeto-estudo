@@ -1,0 +1,21 @@
+PROJETO - Locadora de filmes
+- Uso do status final
+-------------------------------------------------------------------------------
+PROJETO - alterações
+- Implementar Thread.
+- Implementar Exception: verificar todas as classes para criar uma exception pra 
+cada pacote.
+- Cria um sistema de logon para os funcionarios
+- introdizir o atributo 'genero' na classe filme.
+- Valor de venda e filme.
+- Criar um caixa apenas para quem pode cadastrar e descadastrar funcionarios.
+- tornar a classe Pessoa abstrata.
+- criar uma interface em arquivo Protocolo e implementar em Filme e Pessoa.
+- Criar uma classe para controle de arquivos e agora o banco de dados ficará
+salva em arquivo.
+- criar um limite de débito para poder alugar filmes.
+- implementar no método registrar(objeto:Object):boolean da classe 
+Arquivo.ControleBD um throws caso o objeto da entidade passada por parámetro nao 
+possua uma tabela.
+- Tornar protected tudo o que possa ser herdado.
+  

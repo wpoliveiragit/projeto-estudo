@@ -1,0 +1,102 @@
+/JAVA
+1ª Fase (Teoria)
+- Atualmente Java é usado em todos os lugares. Onde é mais usado?
+- O que  são cada um deles JRE, JDK, JVM
+- JSDK NetBeans, Eclipse
++ OO, qual o propósito
+  - Bom para todos os tipos de projetos
+  - Melhor organização
+  - Escreve menos
+  - Prático para trabalhos em equipe
+- Preparando o ambiente
+
+2ª Fase (Sintaxe)
+- Hello World
+- Case sensitive
+- Processo de compilação (um pouco mais sobre JVM)
++ Variáveis primitivas (O que são)
+  - Literal logico (boolean)
+  + Inteiros
+    - byte [8 bytes] (-128 a 127)
+    - short [16 bytes] (-32.768 a 32.767)
+    - int [32 bytes] (-2.147.483.648 a 2.147.483.648)
+    - long [64 bytes] (-9.223.372.036.854.808L a 9.223.372.036.854.807L)
+    Obs.: Em java, todo número inteiro é tratado com 32 bytes, por conta disso 
+    para usar o long devemos agregar ao final do valor um 'L' (pode ser 
+    minusculo, mas o mais apropriado é usar maiúsculo, pois 'l' pode ser 
+    facilmente confundido com o número um '1')
+  + Reais (Grupo dos reais)
+    - float [32 bytes] Este é a maior representação de um valor tanto pra 
+    positivo quanto pra negativo (+3.4E+38F)
+    - double [64 bytes] () Este é a maior representação de um valor tanto pra 
+    positico quanto pra negatico (1.7E308d;)
++ Operadores 
+  - Operadores Aritméticos (+, -, *, /, &)
+  - Operadores Lógicos (&, &&, |, ||, !)
+  - Operadores relacionas (>, >=, <, <=, ==, !=)
+  - String 
+    - Estruturas de decisões (if e switch)
+    - Controles de fluxo (while, do-while, for)
+    - Escopo de variáveis
+
+3ª Fase (Orientação a Objeto)
++ Praticas da teoria de Orientação a Objeto
+  - Pacote
+  - classe e instância
+  - Atributo -> caracteristicas - estados
+  - Método -> procedimento
+  - Construtor
+  - this
+  - throws: Delegar erros (passar a diante o erro )
+  + Documentação básica da classe
+    - ferramentas-> modelos-> java->classe java 
+  + Modificadores de acesso
+    - public: definição de acesso externo pelo objeto e pela classe.
+    - private: definição de acesso apenas interno da classe.
+  - Encapsulamento - protecao do código, agrupamento de atributos e métodos relacionáveis
+  - Referencia de objetos 
+  - Interface (contrato)
+    significado: É o que o objeto precisa, deixando a classe mais flexível minimizando 
+    traumas em atualizações.
+  - Sobrescrita de métodos (Override)
+  + Clone de objeto
+    - Motivo da aplicação
+    - interface Cloneable
+    - super.clone();
+    - try-catch-exception-finally (mesmo que tenha um return ele deverá passar)
+    - Implementação do método de clonagem
+    - instanceOf
+  + Herança
+    - super
+    - protected: definição de acesso apenas interno na classe, mas que 
+      possibilita acesso de classes que as extendem.
+    - Sobre a classe Object 
+  - Polimorfismo 
+  + abstract
+    - na classe
+    - no método
+  - Trabalhando com arquivo
+  + Criar exceptions de classes
+    - Exception: São as falhas do sistema em que o desenvolvedor será obrigado a 
+    tratadas ou relançadas, pois se trata de problemas inconstantes como um 
+    acesso de a uma rede que possa estar offline.
+    - RuntimeException: São erros de sistema, não tem a necessidade de ser 
+    tratadas, pois entende-se que o desenvolvedor se preocupou em tratar (ex x/0)
+    - throw
+  + Entidade
+    - Conceitos básicos (manipulação de um objeto único em um banco de dados)
+    - Persistível: Os dados deverão ser guardados em uma tabela de banco de dados.
+    - Identidade: Código único de acesso aos dados do objeto no banco de dados.
+    - Transacional: Contexto de Regras para efetuar as alterações em BD (commit)
+    - Granularidade: Deverá ser representado em uma linha de uma tabela do banco de dados.
+    Um Adendo: Para criar uma entidade em java, podemos usar a API JPA, mas não
+    vamos entrar neste conceito.
+    
+
+
+
+Obs.: Criar material para classes internas
+
+
+
+

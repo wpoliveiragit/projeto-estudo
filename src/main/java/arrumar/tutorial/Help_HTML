@@ -1,0 +1,31 @@
+Help que ajudara no javaDoc para uma melhor visualização
+
+Para pular uma linha
+    <p>
+
+Texto em negrito
+    <b>Texto em negrito</b>
+
+Inserir tabulação
+    &nbsp
+
+Para inserir apenas um enter
+    <br>
+
+para criar um paragrafo
+<p>esse é um paragrafo</p>
+
+Para criartopicos
+    <UL TYPE="circle">
+        <LI>Lista com circulo</LI>
+    </UL>
+
+    <UL TYPE="square">
+        <LI>Lista com quadrado</LI>
+    </UL>
+
+    <UL TYPE="disc">
+        <LI>Lista com disco</LI>
+    </UL>
+
+

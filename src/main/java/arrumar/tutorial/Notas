@@ -1,0 +1,140 @@
+ECA-01 (PG 14)Acredito que rotular 'atributo' como 'conhecimento' fica uma 
+fixação meio confusa, pq conhecimento requer algum tipo de ação, acho que 
+ficaria mais adequado como 'caracteristica' de um objeto.
+
+ECA-01 (PG 14) método é considerado como um procedimento ou sub rotina
+    * private void metodoX(){...}//métodos privados são considerados como 
+comportamentos.
+    * public void metodoX(){...} //métodos públicos são considerados como ações.
+
+ECA-01 (PG 15) Encapsulamento serve para criar um controle de acesso a métodos e
+atributos que possuirem uma relação, deixar um atributo privado não indica que 
+ele esta encapsulado, mas sim que existe uma ocultação de atributo. 
+
+ECA-01 (PG 16) Cuidado com getter e setter, pois nem sempre faz sentido ocultar 
+um atributo para adicionar estes métodos com o intuito de apenas substituir valor, 
+geralmente getters e setter são adequações de normas de padronisação, eles 
+(mais o setter) normalmente possui uma validação ou adequação do valor passado
+por parametro ex:
+
+public class Conta{
+
+    private floar salco;
+
+    public void getSaldo(){
+        return saldo;
+    }
+
+    public float setSaldo(float saldo){
+        this.saldo = saldo;
+    }
+
+    //resto do código
+}
+
+Repara que faria mais sentido deixa o atributo publico pq assim diminuiria processo,
+Uma solução que eu poderia estar sugerindo é alterar o 'setSalto' por:
+
+    public void addValor(float valor){
+        saldo += valor; //aqui existe uma regra (O valor deve ser adicionado e não substituido)
+    }
+
+Geralmente quando caio nessa situação de criar getter e setter inuteis é pq estou 
+criando classes privadas ou internas, vou dar um exemplo idiota, mas que retrata 
+bem o q quero falar:
+
+import java.util.Random;
+
+/**
+ * É apenas para fins didático e não funcionais ok?!
+ */
+public class Regiao {
+
+    /**
+     * Registro de todos os locais da região.
+     */
+    private Local[] locais;
+
+    {//Cria um local padrão
+        locais = new Local[10];
+        Random r = new Random();
+        for (int i = 0, x = 10, y = 15; i < locais.length; 
+                i++, x += r.nextInt(100), y += r.nextInt(100)) {
+            locais[i] = new Local();
+            locais[i].x = x;
+            locais[i].y = y;
+            locais[i].nome = "Local " + i;
+        }
+    }
+
+    /**
+     * Cria uma região contendo todos os nomes dos locais contidos nela.
+     *
+     * @param nomeLocais Array contendo todos os nomes dos locais da região. Em
+     * caso de nulo, será gerado um local padrão.
+     */
+    public Regiao(String[] nomeLocais) {
+        if (nomeLocais == null) {
+            return;
+        }
+        Random r = new Random();
+        locais = new Local[nomeLocais.length];
+        for (int i = 0, x = 10, y = 15; i < locais.length;
+                i++, x += r.nextInt(100), y += r.nextInt(100)) {
+            locais[i] = new Local();
+            locais[i].x = x;
+            locais[i].y = y;
+            locais[i].nome = nomeLocais[i];
+        }
+    }
+
+    /**
+     * @param nome O nome do local que deseja saber o ponto.
+     *
+     * @return null caso o nome não seja encontrado.
+     */
+    public Local getLocal(String nome) {
+        for (Local p : locais) {
+            if (p.nome.equalsIgnoreCase(nome)) {
+                return p;
+            }
+        }
+        return null;
+    }
+
+    class Local {
+
+        /**
+         * Nome da região.
+         */
+        String nome;
+        /**
+         * Ponto do eixo x.
+         */
+        int x;
+        /**
+         * Ponto do eixo y.
+         */
+        int y;
+
+    }
+
+    public static void main(String[] args) {
+        String[] nomes = "Acre-Amapá-Amazonas-Pará-Rondônia-Roraima-Tocantins".split("-");
+        Regiao regiaoNorte = new Regiao(nomes);
+
+        for (String nome : nomes) {
+            Local p = regiaoNorte.getLocal(nome);
+            System.out.println(p.nome + " (" + p.x + "," + p.y + ")");
+        }
+    }
+}
+
+ECA-01 (PG 17) Na pg 18 vc pede modelagem de dados na PG 17 vc fala de como usar 
+UML de modo básico exemplificando private com (-) e public com (+), mas na PG 15
+explica o protected, seria legal vc colocar um atribuco (#) representando o
+protected.
+
+ECA-01 (PG 15) Não necessariamente um atributo ou método precise de um modificador
+de acesso, um bom exemplo são as classes internas ou classes reservadas apenas 
+para acesso do pacote.

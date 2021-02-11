@@ -1,0 +1,13 @@
+##### COMO EXECUTAR UM ARQUIVO FORA DO COMPILADOR JAVA
+O executavel de um programa java, é o arquivo que tem a extensão .jar
+
+onde ele está?
+    Entre na pasta onde são salvos os seus projetos do compilador
+    exemplo(SO WINDOWS) 
+    Compilador: NetBeans
+    Padão do local dos projetos do netBeans: "C:\Users\Wellington\NetBeans"
+    entre na pasta onde está o projeto que deseja executasr
+    entre na pasta dist, la estará o arquivo .jar
+    abra o Prompt de comando ou CMD e digite:
+    java -jar "caminho\do\local\arquivo\java.jar"
+    Exemplo: java -jar "D:\Projetos\NetBeans\Teste\dist\Teste.jar"

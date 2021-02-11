@@ -1,0 +1,46 @@
+    Pacote: Criaro pacote Pessoa
+    Classe: Criar a classe Pessoa
+    Intancia: Criar o pacote Main, a classe Main e instanciar a classe pessoa
+    Atributos: Criar os atributos Nome, idade, sexo
+    Métodos: Criar o método comunicar e getInfo
+    Construtor: Criar na classe Pessoa um construtor com parametros e depois
+criar um contrutor sem parámetros
+    This: Adaptar o construtor com parámetros usando o this
+    JavaDoc: Criar as anotações da classe Pessoa
+    Modificador de acesso e encapsulamento: Explicar encapsulamento e tornar 
+todos os atributos como private e o método como public
+   <PARAMOS AQUI> Objeto: Explicar que a classe Object é a super classe de todas as classes 
+criadas, informar que um bom programador deve ter o hábito de explorar o fonte
+da classe que estiver usando. Explicar os métodos herdados deste objeto.
+    - equals(Object anObject): retorna um valor booleando informando se o objeto
+passado por parametro é igual ao objeto que invoca este método;
+    - toString(): retorna um texto informativo padrão da instância onde é 
+composto por "Nome_da_classe@hashCode"
+    - hashCode(): gera um código único para a instancia.
+    Referencia de objeto: comparar uma pessoa com outra no main.
+    Interface: explicar o que é interface usando a 'Cloneable' como exemplo
+(precisa ser implementado Cloneable para poder usar o método super.clone() sem
+ser gerado a excessão CloneNotSupportedException criando assim um método que 
+possibilite a clonagem da instancia)
+    Herança: Explicar um pouco sobre a teoria de heranças, crie a classe 
+Cliente tendo como atributo o problema que todo cliente deverá ter e faça ela 
+ser uma extensão da classe
+    abstrata: explicar abstract na classe e no método, implementar na classe 
+Pessoa e no método getInfo
+    try-catch-finally: Criar a classe Arquivo com os métodos, GRAVAR, LER e 
+DELETAR 
+    Exception: explicar como funciona e criar classes de erro para a classe de 
+controle de arquivo
+    Entidade: Conceitos básicos (manipulação de um objeto único em um banco de 
+dados)
+    - Persistível: Guardar os dados em uma tabela de banco de dados.
+    - Identidade: Chave primaria.
+    - Transacional: Contexto de Regras para efetuar as alterações no BD (commit)
+    - Granularidade: deverá ser uma linha na tabela do banco de dados.
+    Classe Entidade: Criar um pacote Entidade e uma classe Entidade usando como
+base de controle a classe Arquivo.
+
+
+    Adendo: Para criar uma entidade em java, podemos usar a API JPA, mas não
+vamos entrar neste conceito
+    

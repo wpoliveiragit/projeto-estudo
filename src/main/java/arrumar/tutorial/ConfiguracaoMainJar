@@ -1,0 +1,9 @@
+    Devemos configurar qual main de um projeto será executado no '.jar', no 
+NetBeans uma maneira de configuração é:
+    * Clique com o botão direito no projeto e pessa propriedades; 
+    * Selecione 'Executar' e clique no botão "Procurar..."  referente a classe 
+principal;
+    * Escolha a classe desejada para ser a classe main e clique em selecionar 
+classe principal;
+    * Feche a janela de configurações;
+    * Clique com o botão direito no projeto e selecione limpar e construir

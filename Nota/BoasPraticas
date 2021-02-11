@@ -1,0 +1,395 @@
+CONVENÇÕES DE CODIGO ***********************************************************
+
+    Neste artigo iremos abordar a importância de convenções adotadas pela Sun e 
+hoje pela Oracle, quanto ao uso da manutenabilidade (capacidade/facilidade de 
+prestar manutenção) nos códigos-fonte.
+
+
+
+A QUE SE DESTINA ***************************************************************
+
+    Gerentes de TI, desenvolvedores, analistas de sistemas, documentadores, 
+auditores e outros relacionados à organização de empresas de T.I
+
+
+QUAL A RAZÃO DE SABER CONVENÇÕES DE CÓDIGO *************************************
+    * 80% do tempo programadores, deveriam estar focados em regras de negócio, 
+entendimento, estudos e outros 20% programando, sendo que ainda faltaria tempo 
+para melhora do código;
+    * Dificilmente um código será mantido "eternamente" pelo seu criador 
+original;    
+    * Códigos bem escritos, bem descritivos, bem anotados aumentam a 
+produtividade, diminuem a quantidade de treinamentos, facilita a leitura e 
+agrada visualmente;   
+    * Se você vende seu código como produto, você deve ter certeza que ele é um 
+produto bem testado, empacotado para ser entregue e que faz o que promete, 
+entregando valor ao seu cliente;  
+    * Convenções padronizam métodos de usabilidade com boas práticas baseado no 
+conhecimento e experiência de um corpo especializado na área;  
+    * Para que as convenções funcionem corretamente no seu ambiente de trabalho 
+é ideal que todos sigam as conformidades dos padrões. Todos, isso deve ser 
+levado como uma regra.
+
+
+COMENTÁRIOS
+/*
+ * Classname             (nome da classe Java)
+ * 
+ * Version information   (versionamento)
+ *
+ * Date                  (Data e Hora)
+ * 
+ * author                (autor(res) da criação)
+ * Copyright notice      (informações do método, pra que serve, idéia principal
+ */
+
+
+PACKAGE E IMPORT STATEMENTS ****************************************************
+    Primeiro os pacote e depois os imports em seguida
+
+package java.awt;
+
+import java.awt.peer.CanvasPeer;
+
+    * Note que o primeiro, pacote é um componente único, escrito em minúsculas e 
+claro que você poderá fazer o uso da *(todos) em casos específicos, mas o ideal 
+é que seja único diminuindo assim a gama de bibliotecas necessárias para futuros 
+Deploys (implantações). Atualmente com, edu, gov, mil, net, org, ou uso em 
+inglês de duas letras que identificam os códigos de países, conforme 
+especificado na norma ISO 3166, 1981.
+
+
+COMPOSIÇÃO DE UMA CLASSE E INTERFACE *******************************************
+
+1- Documentação e comentario de classe/interface
+        Este comentário deve conter todas as informações da classe ou interface 
+    de forma ampla visando sua documentação.
+
+2- Variáveis de classe (estatica)	
+        Primeiro as variáveis de classe publics, em seguida, os protecteds, o 
+    nível de pacote, em seguida, (sem modificador de acesso), e então as 
+    privates.
+
+3- Variáveis de intancia
+        Idem item 4
+
+4- Métodos
+        Aqui os métodos devem ser agrupados pelo seu nível de funcionalidade.
+
+
+
+
+ALINHAMENTO DO CÓDIGO **********************************************************
+
+    * Inicie com 4 espaços ou um tab. A construção exata do recuo (espaços vs 
+tabs) é indeterminado. Tabs deve ser definido exatamente cada 8 espaços (não 4).
+
+    * Evite linhas com mais de 80 caracteres, uma vez que em alguns terminais 
+fica mais difícil de ler.
+
+    * Nota: os exemplos para utilização em documentação deve ter um menor 
+comprimento de linha, geralmente não mais do que 70 caracteres.
+
+    * Quando uma expressão não couber em uma única linha, quebrá-lo de acordo 
+com estes princípios gerais:
+
+    * Quebre após uma vírgula.
+
+    * Quebre antes de um operador.
+
+    * Prefira quebras de nível superior para diminuir o nível-breaks.
+
+    * Se as regras acima expostas levarem à um código confuso ou ao código que 
+está esmagado contra a margem direita, apenas coloque 8 espaços em seu lugar.
+
+
+//Exemplos de quebra de chamadas de método:
+algumMetodo(expressaoLonga1, expressaoLonga2, expressaoLonga3, 
+        expressaoLonga4, expressaoLonga5);
+ 
+var = algumMetodo(expressaoLonga1,
+                algumMetodo2(expressaoLonga2,
+                        expressaoLonga3)); 
+
+
+//Exemplo com códigos usados em métodos aritméticos:
+nomeLongo1 = nomeLongo2 * (nomeLongo3 + nomeLongo4 - nomeLongo5)
+           + 4 * nomeLongo6; // PREFERIVEL
+
+nomeLongo1 = nomeLongo2 * (nomeLongo3 + nomeLongo4
+                       - nomeLongo5) + 4 * nomeLongo; // EVITAR
+
+
+    Exemplo de códigos alinhando métodos. o Primeiro de forma convencional e o 
+segundo ele mudaria as segunda e terceira linhas para a extrema direita se 
+utilizado recuo convencional, então em vez disso, recua apenas 8 espaços
+
+//Não use esta identificação
+if ((condicao1 && condicao2)
+    || (condicao3 && condicao4)
+    ||!(condicao5 && condicao6)) { //BAD WRAPS
+    facaAlgumaCoisaComIsso();      //MAKE THIS LINE EASY TO MISS
+} 
+
+//Use esta identificação
+if ((condicao1 && condicao2)
+        || (condicao3 && condicao4)
+        ||!(condicao5 && condicao6)) {
+    facaAlgumaCoisaComIsso();
+} 
+
+//ou use esta 
+if ((condicao1 && condicao2) || (condicao3 && condicao4)
+        ||!(condicao5 && condicao6)) {
+    facaAlgumaCoisaComIsso();
+}
+
+
+//Exemplos de 3 formas aceitáveis de métodos ternários
+alpha = (aLongBooleanExpression) ? beta : gamma;  
+
+alpha = (aLongBooleanExpression) ? beta
+                                 : gamma;  
+
+alpha = (aLongBooleanExpression)
+        ? beta 
+        : gamma;
+
+
+
+
+
+
+
+
+
+COMENTÁRIOS ********************************************************************
+    * Programas em Java podem ter dois tipos de comentários: comentários de 
+implementação do código e comentários de documentação. Observações de aplicação 
+são os encontrados no mesmo modo C ++, que são delimitados por / * ... * /, 
+e / /. Comentários de documentação (conhecido como "comentários doc") são 
+Java-only, e são delimitados por / ** ... * /. Comentários de documentação podem 
+ser extraídos para arquivos HTML usando a ferramenta javadoc.
+
+    * Comentários de implementação significa comentar o código ,ou parte dele , 
+ou para comentários sobre uma aplicação particular, um método de uma classe por 
+exemplo.
+
+    * Comentários de documentação são destinadas a descrever a especificação do 
+código, a partir de uma perspectiva de implementação livre para ser lido por 
+desenvolvedores que não necessariamente possuem o código fonte em mãos.
+
+    * Os comentários devem ser usados ​​para dar uma visão geral do código e 
+fornecer informações adicionais que não está prontamente disponível no próprio 
+código. Os comentários devem conter apenas informações relevantes para a leitura 
+e compreensão do programa. Por exemplo, informações sobre como o pacote 
+correspondente é construído ou em qual diretório ele reside não deve ser 
+incluído como um comentário.
+
+    * Discussão de decisões de projeto não triviais ou não óbvia é inapropriado, 
+sempre evitar a duplicação de informação que está presente em (e claro) o 
+código. Em geral, evite quaisquer comentários que possam sair do cronograma do 
+código (quando usar datas, fixe-se somente a data de criação) como o código 
+evolui.
+
+    * Comentários nunca devem incluir caracteres especiais, nem deve ser usado 
+em demasia, mas sempre com parcimônia.
+
+
+ALGUNS EXEMPLOS DE CÓDIGOS COM COMENTÁRIOS:
+
+    * Um comentário de bloco deve ser precedido por uma linha em branco para 
+separá-la do resto do código.
+
+/*
+ * Aqui está um bloco de comentário...
+ */
+
+    * Comentários de bloco podem começar com / * -, reconhecido pelo travessão 
+(1) como o início de um bloco de comentário que não deve ser reformatado, ou 
+seja é um alerta de que, quem o fez quer que mantenha nessa forma. Exemplo:
+
+
+Aqui está um comentário de bloco com alguma formatação muito especial que eu 
+quero travessão (1) para ignorar.
+
+/*-
+ * Aqui esta um comentário de bloco com algumas formatações específicas
+ *
+ *    one
+ *        two
+ *            three
+ */
+
+    * Ainda temos os comentários simples, exemplo:
+
+if (condition) {
+
+    /* Manipular a condição. */
+    ...
+}
+
+TRAILING COMMENTS
+
+    Comentários muito curtos podem aparecer na mesma linha do código que está 
+inserida, mas deve ser deslocado o suficiente para separá-los das declarações. 
+Se mais de um breve comentário aparecer em um trecho de código, todos eles 
+deverão ser recuados para a definição da mesma guia, deixando sempre alinhados.
+
+Exemplo:
+
+if (a == 2) {
+    return TRUE;            /* special case */
+} else {
+    return isPrime(a);      /* works only for odd a */
+}
+
+Comentários de fim de linha "//"
+
+    O delimitador // como comentário pode comentar uma linha completa ou apenas 
+parcial. Ele não deve ser utilizado em linhas consecutivas para comentários de 
+texto, no entanto, pode ser utilizado em linhas consecutivas para comentando 
+secções de código. Exemplos de todos os estilos:
+
+if (foo > 1) {
+
+    // Do a double-flip.
+    ...
+}
+else {
+    return false;          // Explain why here.
+}
+//if (bar > 1) {
+//
+//    // Do a triple-flip.
+//    ...
+//}
+//else {
+//    return false;
+//}
+
+DECLARAÇÕES ********************************************************************
+    Uma declaração por linha é recomendado desde que o a menção ao código seja 
+justificada por seu tipo e (ou) referência, em outras palavras:
+
+int level; // indentation level
+int size;  // size of table
+
+    é preferível que seja:
+
+int level, size;
+
+    Nunca coloque tipos diferentes numa mesma linha. Exemplo:
+        
+int foo,  fooarray[]; //errado!
+
+    No exemplo abaixo foi usado um espaço entre o tipo e o variável identificada, 
+outra forma aceitável é o uso de tabs.
+
+int	level;	         // indentation level
+int	size;	         // size of table
+Object	currentEntry;	 // currently selected table entry
+
+CLASSES E UBTERFACES ***********************************************************
+    Classes Java e interfaces seguem algumas regras de formatação, veja:
+
+    * Sem espaço entre um método e o parênteses e o nome do método "(" início de 
+lista de parâmetros;
+    * Abertura da chaves "{" aparece no fim da mesma linha que foi declarado o 
+código ;
+    * Fechamento da chaves "}" começa uma linha alinhada no conjunto do método a 
+qual foi criada, exceto quando há códigos em parte em branco(vazio) ou nulo }"
+devendo aparecer imediatamente depois de aberto com "{"
+    * Métodos são sempre separados por uma linha em branco.
+
+class Sample extends Object {
+    int var1;
+    int var2;
+
+    Sample(int i, int j) {
+        var1 = i;
+        var2 = j;
+    }
+
+    int emptyMethod() {}
+
+    ...
+}
+
+
+
+
+
+CONVENÇÃO PARA NOMES
+    As convenções de nomenclatura tem como objetivo tornar os programas mais 
+compreensíveis, tornando-os mais fáceis de ler. Eles podem também fornecer 
+informações sobre a função do identificador, por exemplo, quer se trate de um 
+pacote, constante, ou de classe que pode ser útil na compreensão do código.
+
+Packages
+    - O prefixo do nome do pacote deve ser único, deve sempre ser escrito em 
+letras minúsculas todo-ASCII e deve ser um dos nomes de domínio de nível 
+superior, atualmente com, edu, gov, mil, net, org, códigos de duas letras 
+identificando os países, tal como especificado na norma ISO 3166, 1981. 
+    - Componentes subseqüentes do nome do pacote varia de acordo com uma 
+organização próprias convenções de nomenclatura internos. 
+    - Tais convenções podem especificar que certos componentes do nome do 
+diretório haver divisão, departamento, projeto, máquina, ou nomes de login.
+
+com.sun.eng 
+com.apple.quicktime.v2 
+edu.cmu.cs.bovik.cheese
+
+
+Classes
+    - Os nomes de classe devem ser substantivos, em maiúsculas e minúsculas com 
+a primeira letra de cada palavra interna em maiúscula.
+    - Tente manter seus nomes de classe simples e descritivo. Sempre evite 
+palavras-ligadas , evite todas siglas e abreviaturas, seja semântico.
+
+class Raster; 
+class ImageSprite;
+
+
+Interfaces
+    - Nomes de interfaces devem ser usadas com as primeiras letras em maiúsculas 
+como nome de classes.
+
+interface RasterDelegate;
+interface Storing;
+
+
+Métodos
+    - Métodos devem ser verbos, com a letra minúscula em primeiro lugar, com a 
+primeira letra de cada palavra interna em maiúscula.
+
+run(); 
+runFast(); 
+getBackground();
+
+
+Variáveis
+    - Os nomes de variáveis não deve começar com underscore _ ou sinal de dólar 
+$ personagens, mesmo que ambos não são permitidos.
+    - Os nomes de variáveis devem ser curtos, mas significativo. A escolha de um 
+nome variável deve ser mnemônico, isto é, concebidos para indicar ao observador 
+casual a intenção da sua utilização. Um personagem nomes de variáveis devem ser 
+evitadas, exceto para temporários "descartáveis" variáveis. Os nomes comuns para 
+variáveis temporárias são i, j, k, m, n e para inteiros, c, d, e e para 
+caracteres.
+
+int i; 
+char c; 
+float myWidth; 
+
+Constantes
+    - Os nomes de variáveis declaradas constantes de classes e de constantes 
+ANSI deve ser todo em letras maiúsculas com palavras separadas por sublinhados 
+("_").
+
+static final int MIN_WIDTH = 4; 
+static final int MAX_WIDTH = 999;
+static final int GET_THE_CPU = 1;
+
+
+
