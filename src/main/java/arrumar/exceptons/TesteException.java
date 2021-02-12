@@ -1,4 +1,4 @@
-package exceptons;
+package arrumar.exceptons;
 
 /**
  * @author Wellington Pires de Oliveira.

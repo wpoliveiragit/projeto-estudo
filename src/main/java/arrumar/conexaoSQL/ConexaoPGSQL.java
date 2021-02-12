@@ -1,4 +1,4 @@
-package conexaoSQL;
+package arrumar.conexaoSQL;
 
 /*
  * ConexaoPGSQL.java
@@ -20,15 +20,14 @@ import javax.swing.JOptionPane;
  */
 
 public class ConexaoPGSQL {
-	
-	
+
 	public static void main(String[] args) {
 		ConexaoPGSQL banco = new ConexaoPGSQL();
 
-        banco.Conectar("jdbc:postgresql://localhost:5432/postgres", "postgres", "postgres");
-        
-        try {
-        	ResultSet r = banco.stmt.executeQuery("create database testee;");
+		banco.Conectar("jdbc:postgresql://localhost:5432/postgres", "postgres", "postgres");
+
+		try {
+			ResultSet r = banco.stmt.executeQuery("create database testee;");
 			System.out.println(r.getRow());
 		} catch (SQLException e) {
 			e.printStackTrace();

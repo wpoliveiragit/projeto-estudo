@@ -1,4 +1,4 @@
-package frame;
+package arrumar.frame;
 
 import java.awt.Toolkit;
 import java.awt.event.KeyEvent;

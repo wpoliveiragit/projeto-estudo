@@ -1,4 +1,4 @@
-package exceptons;
+package arrumar.exceptons;
 
 /**
  * Uma classe Exception deve ser criada sempre quando necessitamos informar para

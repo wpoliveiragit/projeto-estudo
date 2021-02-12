@@ -1,4 +1,4 @@
-package outros;
+package arrumar.outros;
 /**
  * Representação de uma fila ao estilo circular onde devemos definir
  * previamente a capacidade máxima dela.

@@ -1,4 +1,4 @@
-package frame.bola;
+package arrumar.frame.bola;
 
 import java.awt.Color;
 import java.awt.Container;

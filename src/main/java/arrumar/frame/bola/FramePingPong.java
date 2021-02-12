@@ -1,12 +1,13 @@
-package frame.bola;
+package arrumar.frame.bola;
 
 import java.awt.Container;
 import java.awt.Dimension;
 import java.awt.Graphics;
-import java.awt.event.*;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 
-import frame.FrameCadastro;
-import frame.FrameInitConfig;
+import arrumar.frame.FrameCadastro;
+import arrumar.frame.FrameInitConfig;
 
 public class FramePingPong extends FrameCadastro {
 

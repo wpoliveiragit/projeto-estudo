@@ -1,4 +1,4 @@
-package frame.bola;
+package arrumar.frame.bola;
 
 public abstract class ThreadLoop {
 

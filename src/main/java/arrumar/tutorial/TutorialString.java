@@ -1,4 +1,4 @@
-package tutorial;
+package arrumar.tutorial;
 
 /**
  * Classe que explica como usar grande parte dos métodos da classe String.

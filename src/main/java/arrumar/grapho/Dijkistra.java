@@ -1,4 +1,4 @@
-package grapho;
+package arrumar.grapho;
 
 import java.util.List;
 import java.util.ArrayList;

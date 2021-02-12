@@ -1,4 +1,4 @@
-package outros;
+package arrumar.outros;
 
 /**
  * Definição do que a classe representa ou administra sobre uma pessoa.

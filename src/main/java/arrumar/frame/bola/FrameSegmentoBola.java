@@ -1,9 +1,9 @@
-package frame.bola;
+package arrumar.frame.bola;
 
 import java.awt.Dimension;
 
-import frame.FrameCadastro;
-import frame.FrameInitConfig;
+import arrumar.frame.FrameCadastro;
+import arrumar.frame.FrameInitConfig;
 
 /**
  * Definição.

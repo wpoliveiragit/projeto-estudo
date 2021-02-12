@@ -1,4 +1,4 @@
-package frame;
+package arrumar.frame;
 
 import java.awt.Dimension;
 import java.awt.Toolkit;
@@ -10,12 +10,12 @@ public abstract class FrameBase extends JFrame {
 	private static final long serialVersionUID = 1L;
 	
 	/**
-	 * Cria a base de um JFrame em uma configuração básica.
+	 * Cria a base de um JFrame em uma configuraï¿½ï¿½o bï¿½sica.
 	 * 
-	 * @param nome          O nome do projeto que irá aparecer no título da janela.
-	 * @param dimencao      as dimenções do frame.
+	 * @param nome          O nome do projeto que irï¿½ aparecer no tï¿½tulo da janela.
+	 * @param dimencao      as dimenï¿½ï¿½es do frame.
 	 * @param dimencionavel true para janela dimencionavel.
-	 * @param decoracao     false para retirar as decorações de borda.
+	 * @param decoracao     false para retirar as decoraï¿½ï¿½es de borda.
 	 */
 	public FrameBase(String nome, Dimension dimencao, boolean dimencionavel, boolean decoracao) {
 		super(nome);

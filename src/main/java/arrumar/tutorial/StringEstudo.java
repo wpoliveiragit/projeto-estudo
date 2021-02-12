@@ -1,4 +1,4 @@
-package tutorial;
+package arrumar.tutorial;
 
 /**
  *

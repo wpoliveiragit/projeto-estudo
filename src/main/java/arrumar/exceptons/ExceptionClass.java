@@ -1,4 +1,4 @@
-package exceptons;
+package arrumar.exceptons;
 
 /**
  * DEFINIÃ‡ÃƒO: As classes Exceptions sÃ£o criadas para definir

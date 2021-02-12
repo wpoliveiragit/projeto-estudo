@@ -1,4 +1,4 @@
-package grapho;
+package arrumar.grapho;
 
 public class Grapho {
 

@@ -1,4 +1,4 @@
-package enumeration;
+package arrumar.enumeration;
 
 /**
  * Enumeração é um conjunto fixo de constantes pré-definidas.
